@@ -40,7 +40,7 @@ Resources:
           - --jars
           - s3://requiredfiles23231/mysql-connector-java-8.0.23.jar
           - s3://requiredfiles23231/a.py
-        JobFlowId: !Ref MyEMRCluster
+        JobFlowId: j-WVU81USWGNZR
 
   DataCrawler:
     Type: AWS::Glue::Crawler
