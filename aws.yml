@@ -33,4 +33,4 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
           AWS_SESSION_TOKEN: ${{ secrets.AWS_SESSION_TOKEN }}
-          EC2_KEY_PAIR_PATH: s3://requiredfiles2323/onekey.pem
+          EC2_KEY_PAIR_PATH: s3://requiredfiles23231/first_keys.pem
