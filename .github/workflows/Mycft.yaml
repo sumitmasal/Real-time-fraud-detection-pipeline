@@ -17,7 +17,7 @@ Resources:
           InstanceType: m5.xlarge
           Name: CORE
         Ec2SubnetIds: 
-          - subnet-0564b3f97e40fcb34
+          - subnet-01b68b68cd8eb4f82
         Ec2KeyName: first_keys
       JobFlowRole: "EMR_EC2_DefaultRole"
       ServiceRole: "EMR_DefaultRole"
