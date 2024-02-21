@@ -27,6 +27,7 @@ Resources:
     Properties:
       Name: MySparkStep
       ActionOnFailure: CONTINUE
+      JobFlowId: !Ref MyEMRCluster
       HadoopJarStep:
         Jar: command-runner.jar
         Args:
@@ -40,7 +41,6 @@ Resources:
           - --jars
           - s3://requiredfiles23231/mysql-connector-java-8.0.23.jar
           - s3://requiredfiles23231/a.py
-        JobFlowId: !Ref MyEMRCluster
 
   DataCrawler:
     Type: AWS::Glue::Crawler
