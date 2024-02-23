@@ -17,8 +17,8 @@ Resources:
           InstanceType: m5.xlarge
           Name: CORE
         Ec2SubnetIds: 
-          - subnet-0564b3f97e40fcb34
-        Ec2KeyName: first_keys
+          - subnet-01b68b68cd8eb4f82
+        Ec2KeyName: onekey
       JobFlowRole: "EMR_EC2_DefaultRole"
       ServiceRole: "EMR_DefaultRole"
           
@@ -27,7 +27,6 @@ Resources:
     Properties:
       Name: MySparkStep
       ActionOnFailure: CONTINUE
-      JobFlowId: !Ref MyEMRCluster
       HadoopJarStep:
         Jar: command-runner.jar
         Args:
@@ -35,12 +34,13 @@ Resources:
           - --deploy-mode
           - cluster
           - --class
-          - org.apache.spark.deploy.Mysparkob
+          - org.apache.spark.deploy.Mysparkob 
           - --packages
-          - org.apache.spark:spark-sql-kafka-0-10_2.12:3.2.1
+          - org.apache.spark:spark-sql-kafka-0-10_2.12:3.2.1 
           - --jars
-          - s3://requiredfiles23231/mysql-connector-java-8.0.23.jar
-          - s3://requiredfiles23231/a.py
+          - s3://requiredfiles2323/mysql-connector-java-8.0.23.jar 
+          - s3://requiredfiles2323/ab.py
+      JobFlowId: !Ref MyEMRCluster
 
   DataCrawler:
     Type: AWS::Glue::Crawler
@@ -52,5 +52,5 @@ Resources:
       DatabaseName: default
       Targets:
         S3Targets:
-          - Path: s3://athenaoutputbuck1/final.parquet
-      Role: arn:aws:iam::603890438533:role/LabRole
+          - Path: s3://athenabucket-231/final.parquet
+      Role: arn:aws:iam::963746058908:role/LabRole
